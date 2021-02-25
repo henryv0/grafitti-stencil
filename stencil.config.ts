@@ -20,6 +20,10 @@ export const config: Config = {
     },
   ],
   plugins: [
-    sass()
+    sass({
+      injectGlobalPaths: [
+        'src/globals/variables.scss'
+      ]
+    })
   ]
 };
