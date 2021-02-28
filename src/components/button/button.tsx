@@ -11,7 +11,7 @@ export class Button {
   
   @Prop() theme: 'primary' | 'secondary' | 'outlined' | 'naked';
 
-  hasIconOnly() {
+  private hasIconOnly() {
     return Boolean(this.element.querySelector('[slot="icon-only"]'));
   }
 

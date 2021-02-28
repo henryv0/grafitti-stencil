@@ -4,12 +4,42 @@
 }
 
 .button {
-  font-size: 1rem;
+  display: inline-flex;
   border: none;
   border-radius: 4px;
   white-space: nowrap;
+  vertical-align: middle;
   text-align: center;
   padding: 1rem;
   background-color: $white;
   border: 1px solid $light-grey;
+  cursor: auto;
+
+  &.button--primary {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+  }
+
+  &.button--secondary {
+    background-color: $secondary-color;
+    color: $white;
+    border: none;
+  }
+
+  &.button--outlined {
+    border-style: dashed;
+  }
+
+  &.button--naked {
+    border: none;
+  }
+
+  &.button--icon-only {
+    font-size: 0;
+  }
+}
+
+::slotted(g-icon) {
+  pointer-events: none;
 }
