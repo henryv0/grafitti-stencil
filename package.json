@@ -19,18 +19,37 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "storybook": "start-storybook -p 6006",
+    "story": "start-storybook -s ./dist",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@stencil/core": "^2.0.1"
+    "@stencil/core": "^2.0.1",
+    "@storybook/preset-scss": "^1.0.3",
+    "css-loader": "^5.1.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0"
   },
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.13.8",
     "@stencil/sass": "^1.4.1",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/html": "^6.1.20",
     "@types/jest": "^26.0.20",
     "@types/puppeteer": "^5.4.3",
+    "babel-loader": "^8.2.2",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
-    "puppeteer": "^7.1.0"
+    "puppeteer": "^7.1.0",
+    "@babel/plugin-syntax-jsx": "^7.10.4",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@storybook/addon-knobs": "^6.0.20",
+    "@types/node": "^14.6.2",
+    "@types/react": "^16.9.49"
   }
 }
