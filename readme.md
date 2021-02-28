@@ -1,8 +1,17 @@
 # Grafitti - Built with Stencil
 
-This project is build with StencilJS and aims to generate a component library of Web Components.
+This project is build with StencilJS and aims to generate a component library of Web Components. You can find my writeup of this proof of concept in [this file](explanation.md).
 
 ## Installation
+
+This library is published on NPM https://www.npmjs.com/package/@henryv0/grafitti.
+```
+$ npm install --save @henryv0/grafitti
+```
+
+Framework integration documentation is available here: https://stenciljs.com/docs/overview
+
+## Local installation
 
 ```bash
 $ npm install
