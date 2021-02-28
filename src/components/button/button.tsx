@@ -1,5 +1,15 @@
 import { Component, Prop, h, Element } from '@stencil/core';
 
+/**
+ * @tag g-button
+ *
+ * @slot - The button text.
+ * @slot icon-start - For adding an icon to the left.
+ * @slot icon-end - For adding an icon to the right.
+ * @slot icon-only - Used when a button only contains an icon with no text.
+ * 
+ */
+
 @Component({
   tag: 'g-button',
   styleUrl: 'button.scss',
@@ -9,6 +19,9 @@ import { Component, Prop, h, Element } from '@stencil/core';
 export class Button {
   @Element() element: HTMLElement;
   
+  /**
+   * The theme of the button.
+   */
   @Prop() theme: 'primary' | 'secondary' | 'outlined' | 'naked';
 
   private hasIconOnly() {

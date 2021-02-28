@@ -7,7 +7,12 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface GButton {
+        /**
+          * The theme of the button.
+         */
         "theme": 'primary' | 'secondary' | 'outlined' | 'naked';
+    }
+    interface GIcon {
     }
 }
 declare global {
@@ -17,16 +22,29 @@ declare global {
         prototype: HTMLGButtonElement;
         new (): HTMLGButtonElement;
     };
+    interface HTMLGIconElement extends Components.GIcon, HTMLStencilElement {
+    }
+    var HTMLGIconElement: {
+        prototype: HTMLGIconElement;
+        new (): HTMLGIconElement;
+    };
     interface HTMLElementTagNameMap {
         "g-button": HTMLGButtonElement;
+        "g-icon": HTMLGIconElement;
     }
 }
 declare namespace LocalJSX {
     interface GButton {
+        /**
+          * The theme of the button.
+         */
         "theme"?: 'primary' | 'secondary' | 'outlined' | 'naked';
+    }
+    interface GIcon {
     }
     interface IntrinsicElements {
         "g-button": GButton;
+        "g-icon": GIcon;
     }
 }
 export { LocalJSX as JSX };
@@ -34,6 +52,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "g-button": LocalJSX.GButton & JSXBase.HTMLAttributes<HTMLGButtonElement>;
+            "g-icon": LocalJSX.GIcon & JSXBase.HTMLAttributes<HTMLGIconElement>;
         }
     }
 }
