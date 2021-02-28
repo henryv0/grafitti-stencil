@@ -24,11 +24,13 @@ export class Button {
           'button--secondary': this.theme === 'secondary',
           'button--outlined': this.theme === 'outlined',
           'button--naked': this.theme === 'naked',
-          'button-has-icon-only': this.hasIconOnly(),
+          'button--icon-only': this.hasIconOnly(),
         }}
       >
         <slot name="icon-only" />
+        <slot name="icon-start" />
         <slot />
+        <slot name="icon-end" />
       </button>
     );
   }
